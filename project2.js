@@ -94,7 +94,11 @@ function createNewTask(){
     console.log("Enter the due date in dd/mm/y format : ") ;
     let date = "5/6/2023" ;
     //creating a task with defualt values until user input problem is fixed
-    tasks.push(new Task(priority , date , des)) ;
+    let temporary = new Task ;
+    temporary.description = des ;
+    temporary.dueDate = date ;
+    temporary.priority = priority ;
+    tasks.push(temporary) ;
 }
 function listTasks(){
     if (tasks.length == 0)console.log("There are no current tasks in your list") ;
